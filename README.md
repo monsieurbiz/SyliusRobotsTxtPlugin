@@ -26,6 +26,11 @@ composer config --no-plugins --json extra.symfony.endpoint '["https://api.github
 composer require monsieurbiz/sylius-robots-txt-plugin
 ```
 
+Then remove your `robots.txt` file from your public directory.
+```
+rm public/robots.txt
+```
+
 ## Contributing
 
 You can open an issue or a Pull Request if you want! 😘  
