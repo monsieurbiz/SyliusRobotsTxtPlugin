@@ -5,42 +5,18 @@
     "description": "Manage your robot.txt from your Sylius admin pannel",
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "sylius/sylius": ">=1.12 <1.13"
+        "monsieurbiz/sylius-settings-plugin": "^1.2.0",
+        "php": "^8.0",
+        "sylius/sylius": ">=1.12 <1.14"
     },
     "require-dev": {
-        "behat/behat": "^3.6.1",
-        "behat/mink-selenium2-driver": "^1.4",
-        "dmore/behat-chrome-extension": "^1.3",
-        "dmore/chrome-mink-driver": "^2.7",
-        "friendsofphp/php-cs-fixer": "^3.51",
-        "friends-of-behat/mink": "^1.8",
-        "friends-of-behat/mink-browserkit-driver": "^1.4",
-        "friends-of-behat/mink-debug-extension": "^2.0.0",
-        "friends-of-behat/mink-extension": "^2.4",
-        "friends-of-behat/page-object-extension": "^0.3",
-        "friends-of-behat/suite-settings-extension": "^1.0",
-        "friends-of-behat/symfony-extension": "^2.1",
-        "friends-of-behat/variadic-extension": "^1.3",
-        "phpmd/phpmd": "^2.15",
-        "phpspec/phpspec": "^7.2",
-        "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan": "^1.8.1",
-        "phpstan/phpstan-doctrine": "1.3.40",
-        "phpstan/phpstan-strict-rules": "^1.3.0",
-        "phpstan/phpstan-webmozart-assert": "^1.2.0",
-        "phpunit/phpunit": "^9.5",
-        "polishsymfonycommunity/symfony-mocker-container": "^1.0",
-        "sylius-labs/coding-standard": "^4.2",
-        "symfony/browser-kit": "^5.4 || ^6.0",
-        "symfony/debug-bundle": "^5.4 || ^6.0",
-        "symfony/dotenv": "^5.4 || ^6.0",
-        "symfony/flex": "^2.2.2",
-        "symfony/intl": "^5.4 || ^6.0",
-        "symfony/web-profiler-bundle": "^5.4 || ^6.0",
-        "vimeo/psalm": "5.12.0",
-        "phpmd/phpmd": "^2.13",
-        "friendsofphp/php-cs-fixer": "^3.16"
+        "friendsofphp/php-cs-fixer": "^3.16",
+        "phpspec/phpspec": "^7.0",
+        "phpstan/phpstan": "^1.8.4",
+        "phpstan/phpstan-doctrine": "^1.3.2",
+        "phpstan/phpstan-webmozart-assert": "^1.1",
+        "phpunit/phpunit": "^10.5",
+        "phpmd/phpmd": "^2.15"
     },
     "prefer-stable": true,
     "autoload": {
@@ -53,32 +29,28 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-        "phpcs": "php-cs-fixer fix --using-cache=no",
+        "phpcs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --using-cache=no",
         "phpstan": "phpstan analyse -c phpstan.neon src/",
         "phpmd": "phpmd --exclude Migrations/* src/ ansi phpmd.xml",
         "phpunit": "phpunit",
         "phpspec": "phpspec run"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        },
         "symfony": {
             "docker": false,
-            "endpoint": [
-                                "https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master",
-                                "flex://defaults"
-            ]
-        },
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+            "endpoint": ["https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master", "flex://defaults"]
         }
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
             "symfony/thanks": true,
-            "ergebnis/composer-normalize": true,
             "symfony/flex": true,
-            "php-http/discovery": false,
-            "phpstan/extension-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": true
         }
     }
 }
