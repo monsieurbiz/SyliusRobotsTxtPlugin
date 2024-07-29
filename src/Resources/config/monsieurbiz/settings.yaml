@@ -1,0 +1,14 @@
+monsieurbiz_sylius_settings:
+    plugins:
+        monsieurbiz_robots_txt.robotstxt:
+            vendor_name: Monsieur Biz
+            plugin_name: monsieurbiz_robots_txt.settings.robots_txt.plugin_name
+            description: monsieurbiz_robots_txt.settings.robots_txt.description
+            icon: searchengin
+            use_locales: false
+            classes:
+                form: MonsieurBiz\SyliusRobotsTxtPlugin\Form\Type\RobotsTxtType
+            default_values:
+                robots_txt_content: |
+                    User-agent: *
+                    Disallow:

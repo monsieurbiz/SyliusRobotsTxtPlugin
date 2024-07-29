@@ -1,0 +1,5 @@
+monsieurbiz_robots_txt_render:
+    path: /robots.txt
+    methods: [ GET ]
+    defaults:
+        _controller: MonsieurBiz\SyliusRobotsTxtPlugin\Controller\RenderController

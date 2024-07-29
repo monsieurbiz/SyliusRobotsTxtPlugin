@@ -1,0 +1,7 @@
+monsieurbiz_robots_txt:
+    form:
+        robots_txt_content: 'Robots Txt content'
+    settings:
+        robots_txt:
+            plugin_name: Robots Txt
+            description: Edit your robots.txt file
