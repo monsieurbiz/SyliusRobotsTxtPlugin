@@ -1,0 +1,2 @@
+imports:
+   resource: '@MonsieurBizSyliusRobotsTxtPlugin/Resources/config/routes.yaml'

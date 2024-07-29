@@ -1,0 +1,6 @@
+suites:
+    main:
+        namespace: MonsieurBiz\SyliusRobotsTxtPlugin
+        psr4_prefix: MonsieurBiz\SyliusRobotsTxtPlugin
+        src_path: src
+        spec_path: tests

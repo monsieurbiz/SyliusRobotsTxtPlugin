@@ -1,0 +1,9 @@
+monsieurbiz_robots_txt_admin:
+    resource: '@MonsieurBizSyliusRobotsTxtPlugin/Resources/config/routes/admin.yaml'
+    prefix: '/%sylius_admin.path_name%'
+
+monsieurbiz_robots_txt_shop:
+    resource: '@MonsieurBizSyliusRobotsTxtPlugin/Resources/config/routes/shop.yaml'
+    prefix: '/{_locale}'
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$

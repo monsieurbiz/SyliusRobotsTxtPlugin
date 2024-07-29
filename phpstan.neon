@@ -1,0 +1,14 @@
+parameters:
+    level: max
+    paths:
+        - %rootDir%/src/
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+
+    excludePaths:
+        # Makes PHPStan crash
+        - 'src/DependencyInjection/SyliusRobotsTxtExtension.php'
+
+        # Test dependencies
+        - 'tests/Application/**/*'
