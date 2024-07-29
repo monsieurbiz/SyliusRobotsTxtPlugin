@@ -5,7 +5,7 @@
 [![Recipe Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusRobotsTxtPlugin/recipe.yaml?branch=master&label=recipes&logo=github)](https://github.com/monsieurbiz/SyliusRobotsTxtPlugin/actions?query=workflow%3ASecurity)
 [![Security Status](https://img.shields.io/github/actions/workflow/status/monsieurbiz/SyliusRobotsTxtPlugin/security.yaml?branch=master&label=security&logo=github)](https://github.com/monsieurbiz/SyliusRobotsTxtPlugin/actions?query=workflow%3ASecurity)
 
-Manage your robot.txt from your Sylius admin pannel
+Manage your robots.txt from your Sylius admin pannel
 
 ## Compatibility
 

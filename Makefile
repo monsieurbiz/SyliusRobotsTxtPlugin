@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 SHELL=/bin/bash
 APP_DIR=tests/Application
-SYLIUS_VERSION=1.12.0
+SYLIUS_VERSION=1.13.0
 SYMFONY=cd ${APP_DIR} && symfony
 COMPOSER=symfony composer
 CONSOLE=${SYMFONY} console
@@ -80,7 +80,7 @@ setup_application:
 	$(MAKE) apply_dist
 	(cd ${APP_DIR} && ${COMPOSER} require --no-progress monsieurbiz/${PLUGIN_NAME}="*@dev")
 	rm -rf ${APP_DIR}/var/cache
-	rm -f ${APP_DIR}/robots.txt # Remove the default robots.txt file to let our controller render contents
+	rm -f ${APP_DIR}/public/robots.txt # Remove the default robots.txt file to let our controller render contents
 
 
 ${APP_DIR}/docker-compose.yaml:
