@@ -7,6 +7,8 @@
 
 Manage your robots.txt from your Sylius admin pannel
 
+![Demo of the settings form to manage robots.txt content](docs/images/demo.jpg)
+
 ## Compatibility
 
 | Sylius Version | PHP Version |
@@ -30,6 +32,41 @@ Then remove your `robots.txt` file from your public directory.
 ```
 rm public/robots.txt
 ```
+
+<details><summary>For the installation without flex, follow these additional steps</summary>
+<p>
+
+[Setup Settings Installation](https://github.com/monsieurbiz/SyliusSettingsPlugin/?tab=readme-ov-file#installation)
+
+Change your `config/bundles.php` file to add this line for the plugin declaration:
+```php
+<?php
+
+return [
+    //..
+    MonsieurBiz\SyliusRobotsTxtPlugin\MonsieurBizSyliusRobotsTxtPlugin::class => ['all' => true],
+];  
+```
+
+Then create the config file in `config/packages/monsieurbiz_sylius_robots_txt_plugin.yaml` :
+
+```yaml
+imports:
+    resource: '@MonsieurBizSyliusRobotsTxtPlugin/Resources/config/config.yaml'
+```
+
+Finally import the routes in `config/routes/monsieurbiz_sylius_robots_txt_plugin.yaml` : 
+
+```yaml
+monsieurbiz_robots_txt_render:
+    path: /robots.txt
+    methods: [ GET ]
+    defaults:
+        _controller: MonsieurBiz\SyliusRobotsTxtPlugin\Controller\RenderController
+```
+
+</p>
+</details>
 
 ## Contributing
 
