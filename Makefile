@@ -80,6 +80,7 @@ setup_application:
 	$(MAKE) apply_dist
 	(cd ${APP_DIR} && ${COMPOSER} require --no-progress monsieurbiz/${PLUGIN_NAME}="*@dev")
 	rm -rf ${APP_DIR}/var/cache
+	rm -f ${APP_DIR}/robots.txt # Remove the default robots.txt file to let our controller render contents
 
 
 ${APP_DIR}/docker-compose.yaml:
