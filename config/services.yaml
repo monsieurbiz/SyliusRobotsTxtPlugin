@@ -5,10 +5,9 @@ services:
         public: false
 
     MonsieurBiz\SyliusRobotsTxtPlugin\:
-        resource: '../../*'
-        exclude: '../../{Entity}'
+        resource: '../src/*'
+        exclude: '../src/{Entity}'
 
     MonsieurBiz\SyliusRobotsTxtPlugin\Controller\:
-        resource: '../../Controller'
+        resource: '../src/Controller'
         tags: [ 'controller.service_arguments' ]
-

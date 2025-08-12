@@ -13,9 +13,10 @@ Manage your robots.txt and llms.txt from your Sylius admin pannel
 
 | Sylius Version | PHP Version     |
 |----------------|-----------------|
-| 1.12           | 8.1 - 8.2 - 8.3 |
-| 1.13           | 8.1 - 8.2 - 8.3 |
-| 1.14           | 8.1 - 8.2 - 8.3 |
+| 2.0.0           | 8.2 - 8.3      |
+| 2.1.0           | 8.2 - 8.3      |
+
+ℹ️ For Sylius 1.x, see our [1.x branch](https://github.com/monsieurbiz/SyliusRobotsTxtPlugin/tree/1.x) and all 1.x releases.
 
 ## Installation
 
@@ -53,7 +54,7 @@ Then create the config file in `config/packages/monsieurbiz_sylius_robots_txt_pl
 
 ```yaml
 imports:
-    resource: '@MonsieurBizSyliusRobotsTxtPlugin/Resources/config/config.yaml'
+    resource: '@MonsieurBizSyliusRobotsTxtPlugin/config/config.yaml'
 ```
 
 Finally import the routes in `config/routes/monsieurbiz_sylius_robots_txt_plugin.yaml` : 
